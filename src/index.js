@@ -8,7 +8,14 @@ module.exports = function getTimeForEducation(
     focus = 'family', 
     knowsProgramming = true,
     config = {family: 4}
-    ) {
-      return 0;
+    ) {    
+      let hoursInWeek = config[focus];
+      let result = hoursInWeek;
+      let total = knowsProgramming ? 800 : 1300;
+
+      while(result < total) {
+        result += hoursInWeek;
+      }
+      return result/hoursInWeek;
   };
   
